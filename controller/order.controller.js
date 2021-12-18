@@ -2,7 +2,7 @@ const {OrderSchema} = require('../model/order');
 const {UserSchema} = require('../model/user');
 const {CartSchema} = require('../model/cart');
 const mongoose = require('mongoose');
-const {sendEmail} = require('../util/sendMailSendGrid');
+const {sendEmail} = require('../util/sendMailMailgun');
 
 const placeOrder = (req, res) => {
 

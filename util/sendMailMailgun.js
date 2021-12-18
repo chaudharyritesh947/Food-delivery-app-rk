@@ -11,7 +11,7 @@ const sendEmail = (data) => {
 
    //making data object
     var data = {
-        from: `Food delivery app <chaudharyritesh947@gmail.com>`,
+        from: `Food delivery app <chaudharyritesh947@sandboxa02706ae750a41528d336b52736ada50.mailgun.org>`,
         to: data.user.email,
         subject: 'Thanks for order with FDA',
         text: `Total amount to be paid is: ${orderItems.amount} \n ${items} `,
