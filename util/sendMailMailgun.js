@@ -11,7 +11,7 @@ const sendEmail = (data) => {
 
    //making data object
     var data = {
-        from: 'Food delivery app <chaudharyritesh947@gmail.com>',
+        from: `Food delivery app <chaudharyritesh947@gmail.com>`,
         to: data.user.email,
         subject: 'Thanks for order with FDA',
         text: `Total amount to be paid is: ${orderItems.amount} \n ${items} `,
@@ -20,7 +20,12 @@ const sendEmail = (data) => {
 
     //sending mail via mailgun
     mailgun.messages().send(data, function (error, body) {
-        console.log(body);
+        if(error){
+            console.log(error, "Could not send the confirmation mail for ", data);
+        }
+        else{
+            console.log(body);
+        }
     });
 }
 
